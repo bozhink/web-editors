@@ -4,8 +4,13 @@
   "description": "Samples for using html web editors",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test.js"
-  },
+    "start": "node index.js",
+    "test": "mocha tests/",
+    "test-kitten": "mocha -R nyan public/tests/",
+    "watch": "gulp watch",
+    "build": "gulp build",
+    "continuous-build": "gulp continuous-build"
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bozhink/web-editors.git"
