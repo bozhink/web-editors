@@ -1,0 +1,28 @@
+extends ../shared/layout.pug
+
+block title
+    title Sign Up
+
+block header
+    h2 Sign Up
+
+block content
+    form#register-form(action='/auth/register' method='POST')
+        .form-horizontal
+            h4 Fill required fields
+            hr
+
+            .form-group
+                label.control-label.col-md-2(for='username') username
+                .col-md-10
+                    input.form-control#username(name='username' type='text' required)
+
+            .form-group
+                label.control-label.col-md-2(for='password') password
+                .col-md-10
+                    input.form-control#password(name='password' type='password' required)
+
+            .form-group
+                .col-md-offset-2.col-md-10
+                    input.btn.btn-primary(type='submit' value='Submit')
+                    input.btn.btn-default(type='reset' value='Reset')
