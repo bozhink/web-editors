@@ -1,0 +1,14 @@
+if user != null && user.profile != null
+    form#logoutForm(class='navbar-right' anction='/auth/logout')
+        ul(class='nav navbar-nav navbar-right')
+            li
+                a(href='/manage') Hello #{user.profile.username}!
+            li
+                a(href='javascript:document.getElementById("logoutForm").submit()') Sign Out
+
+else
+    ul(class='nav navbar-nav navbar-right')
+        li
+            a#registerLink(href='/auth/register') Register
+        li
+            a#loginLink(href='/auth/login') Sign In

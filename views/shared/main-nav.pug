@@ -1,0 +1,24 @@
+nav(class='navbar navbar-inverse navbar-fixed-top')
+    div(class='container')
+        div(class='navbar-header')
+            button(type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse')
+                span(class='icon-bar')
+                span(class='icon-bar')
+                span(class='icon-bar')
+            a(href='/' class='navbar-brand') Application Name
+
+        div(class='navbar-collapse collapse')
+            ul(class='nav navbar-nav')
+                li(class='dropdown')
+                    a(href='#' class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false') Help
+                        span(class='caret')
+
+                    ul(class='dropdown-menu')
+                        li
+                            a(href='/help') Help
+                        li(role='separator' class='divider')
+                        li
+                            a(href='/contacts') Contacts
+                        li
+                            a(href='/about') About
+            include login.pug
