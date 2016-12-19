@@ -5,6 +5,12 @@ var gulp = require('gulp'),
     browserify = require('gulp-browserify'),
     mocha = require('gulp-mocha');
 
+gulp.task('build-monaco-config', function () {
+    return gulp.src('./client/src/js/monaco-config.js')
+        .pipe(browserify())
+        .pipe(gulp.dest('./client/dist/js'));
+ });
+
 gulp.task('less', function () {
     gulp.src('./client/src/less/**/*.less')
         .pipe(less())
@@ -39,7 +45,7 @@ gulp.task('browserify', function () {
     pipe(gulp.dest('./client/dist/js/'));
 });
 
-gulp.task('build', ['less', 'validation-js', 'browserify']);
+gulp.task('build', ['less', 'validation-js', 'browserify', 'build-monaco-config']);
 
 gulp.task('continuous-build', function () {
     gulp.watch(['./client/src/**/*.*'], ['build']);

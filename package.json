@@ -10,7 +10,7 @@
     "watch": "gulp watch",
     "build": "gulp build",
     "continuous-build": "gulp continuous-build"
-},
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bozhink/web-editors.git"
@@ -47,6 +47,7 @@
     "express-session": "^1.14.2",
     "http-status": "^0.2.3",
     "lodash": "^4.17.2",
+    "monaco-editor": "^0.7.0",
     "mongodb": "^2.2.15",
     "mongoose": "^4.7.2",
     "morgan": "^1.7.0",

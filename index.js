@@ -16,6 +16,7 @@ app.use(bodyParser.json());
 app.use(express.static(__dirname + '/client', {
     maxAge: 4 * 60 * 60 * 100 /* 2hrs */
 }));
+app.use('/nm', express.static(__dirname + '/node_modules'));
 app.use('/lib', express.static(__dirname + '/bower_components'));
 app.use('/css', express.static(__dirname + '/client/dist/css'));
 app.use('/js', express.static(__dirname + '/client/dist/js'));

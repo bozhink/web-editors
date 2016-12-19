@@ -1,0 +1,13 @@
+extends ../shared/layout.pug
+
+block title
+    title Monaco Editor
+
+block header
+    h1 Monaco Editor
+
+block content
+    script(src="/nm/monaco-editor/min/vs/loader.js")
+    div(style="width:800px;height:200px;border:1px solid grey")#editor-container
+        //- div Editor should be here
+    script(src="/js/monaco-config.js")
