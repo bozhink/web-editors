@@ -6,7 +6,10 @@ function editorsRouter() {
     router
         .get('/monaco', function (req, res) {
             res.render('editors/monaco');
-        });
+        })
+        .get('/ace', function (req, res) {
+            res.render('editors/ace');
+         });
 
     return router;
 }

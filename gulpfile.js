@@ -45,6 +45,11 @@ gulp.task('browserify', function () {
     pipe(gulp.dest('./client/dist/js/'));
 });
 
+gulp.task('build-ace-lib', function () {
+    return gulp.src('./node_modules/ace/build/src/*.js')
+        .pipe()
+});
+
 gulp.task('build', ['less', 'validation-js', 'browserify', 'build-monaco-config']);
 
 gulp.task('continuous-build', function () {
