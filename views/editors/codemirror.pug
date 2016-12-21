@@ -1,0 +1,14 @@
+extends ../shared/layout.pug
+
+block title
+    title CodeMirror
+
+block header
+    h1 CodeMirror
+
+block content
+    textarea(style="width: 500px;height: 400px;")#editor some text
+
+block scripts
+    script(src="/nm/requirejs/require.js")
+    script(src="/js/codemirror-config.min.js")

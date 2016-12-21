@@ -34,6 +34,14 @@ gulp.task('build-monaco-config', function () {
         .pipe(gulp.dest(path.join(distPath, paths.js)));
 });
 
+gulp.task('build-codemirror-config', function () {
+    return gulp.src(path.join(srcPath, paths.js, 'codemirror-config.js'))
+        .pipe(browserify())
+        .pipe(concat('codemirror-config.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest(path.join(distPath, paths.js)));
+});
+
 gulp.task('build-ace-config', function () {
     return gulp.src(path.join(srcPath, paths.js, 'ace-config.js'))
         .pipe(browserify())
@@ -82,7 +90,8 @@ gulp.task('build-ace-lib', function () {
             './modules/ace/build/src/ace.js',
             './modules/ace/build/src/ext-*.js',
             './modules/ace/build/src/mode-*.js',
-            './modules/ace/build/src/theme-*.js'
+            './modules/ace/build/src/theme-*.js',
+            //'./modules/ace/build/src/worker-*.js',
         ])
         .pipe(plumber())
         .pipe(concat('ace.min.js'))
@@ -100,7 +109,8 @@ gulp.task('build', [
     'validation-js',
     'browserify',
     'build-monaco-config',
-    'build-ace-config'
+    'build-ace-config',
+    'build-codemirror-config'
 ]);
 
 gulp.task('watch-build', function () {

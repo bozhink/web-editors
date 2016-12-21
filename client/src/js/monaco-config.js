@@ -1,14 +1,10 @@
 'use strict';
 
-var require = window.require;
+var requirejs = window.require;
 
-require.config({
-    paths: {
-        'vs': '/nm/monaco-editor/min/vs'
-    }
-});
+require('./requirejs-config')(requirejs);
 
-require(['vs/editor/editor.main'], function () {
+requirejs(['vs/editor/editor.main'], function () {
     var monaco = window.monaco,
         editor = monaco.editor.create(document.getElementById('editor-container'), {
         value: [

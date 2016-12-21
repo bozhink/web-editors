@@ -9,6 +9,9 @@ function editorsRouter() {
         })
         .get('/ace', function (req, res) {
             res.render('editors/ace');
+        })
+        .get('/codemirror', function (req, res) {
+            res.render('editors/codemirror');
          });
 
     return router;
