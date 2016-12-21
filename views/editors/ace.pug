@@ -3,19 +3,11 @@ extends ../shared/layout.pug
 block title
     title Ace Editor
 
-block stylesheet
-    link(rel='stylesheet' href='/nm/ace/api/resources/csses/ace_api.css')
-
-block headScripts
-    script(src="/nm/ace/build/src/ace.js")
-    script(src="/nm/ace/build/src/ext-static_highlight.js")
-    script(src="/nm/ace/build/src/mode-xml.js")
-    script(src="/nm/ace/build/src/theme-twilight.js")
-
 block header
     h1 Ace Editor
-    p Install in the <kbd>~/node_modules</kbd> with command <kbd>git clone git://github.com/ajaxorg/ace.git</kbd>
+    p Install in the <kbd>~/modules</kbd> with command <kbd>git clone git://github.com/ajaxorg/ace.git</kbd>
 
 block content
     div(style="width: 500px;height: 400px;")#editor some text
-    script var editor = ace.edit("editor"); editor.setTheme("ace/theme/twilight");
+    script(src="/js/ace.min.js")
+    script(src="/js/ace-config.min.js")
