@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "postinstall": "./node_modules/bower/bin/bower",
+    "postinstall": "./node_modules/.bin/bower install; ./node_modules/.bin/gulp build",
     "test": "mocha tests/",
     "test-kitten": "mocha -R nyan public/tests/",
     "build": "gulp build",
