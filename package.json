@@ -11,7 +11,9 @@
     "build": "gulp build",
     "clean": "gulp clean",
     "watch": "gulp watch-build",
-    "watch-test": "gulp watch-test"
+    "watch-test": "gulp watch-test",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -85,6 +87,8 @@
     "superagent": "^3.2.1",
     "underscore": "^1.8.3",
     "uuid": "^3.0.1",
-    "wagner-core": "^0.2.0"
-  }
+    "wagner-core": "^0.2.0",
+    "snyk": "^1.41.1"
+  },
+  "snyk": true
 }
